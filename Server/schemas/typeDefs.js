@@ -15,7 +15,7 @@ const typeDefs = gql`
   }
 
   type Meetup {
-    meetupId: String!
+    _id: ID!
     name: String!
     hairColor: Int
     height: Int
@@ -36,7 +36,7 @@ const typeDefs = gql`
   type Mutation {
     
     login(email: String!, password: String!):Auth
-    saveMeetup(meetupId: String, name: String, hairColor: Int,height: Int, physicalAttributes: Int, conversation: Int, laughs: Int, butterflies: Int, eyeContact: Int, smile: Int, generalVibe: String ):User
+    saveMeetup(name: String, hairColor: Int,height: Int, physicalAttributes: Int, conversation: Int, laughs: Int, butterflies: Int, eyeContact: Int, smile: Int, generalVibe: String ):User
     removeMeetup(meetupId: String!): User
     addUser(username: String!, email: String!, password: String!):Auth
 
