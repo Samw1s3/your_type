@@ -12,9 +12,12 @@ function checkLogin(context){
 
 const resolvers = {
   Query: {
-    me: async (parent, args, context) => checkLogin(context),
-
-    meetups: async(parent, args, context)
+    me: async (parent, args, context) => {
+        checkLogin(context);
+        const userData = await User.findOne( { _id: context.user._id }).select('-__v -password');
+        return userData;
+    },
+    // meetups: async (parent, args, context) 
   },
   Mutation: {
     async login(parent, {email, password}, context){

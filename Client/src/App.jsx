@@ -10,7 +10,8 @@ import {
 import Home from './pages/home';
 import Create from './pages/createMeetup';
 import Home from './pages/home';
-import AppLayout from './layouts/appLayout';
+import Dashboard from './pages/dashboard';
+// import AppLayout from './layouts/appLayout';
 
 function App() {
   return (
@@ -21,9 +22,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
 
-        <Route path="/create" element={<Contact/>} />
+        <Route path="/create" element={<Create/>} />
 
-        <Route path="/projects" element={<Projects/>} />
+        <Route path="/dashboard" element={<Dashboard/>} />
 
       </Routes>
     
