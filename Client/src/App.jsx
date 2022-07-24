@@ -17,7 +17,7 @@ function App() {
   return (
   <div>
     
-    <AppLayout>
+    
 
       <Routes>
         <Route path="/" element={<Home/>} />
@@ -28,7 +28,6 @@ function App() {
 
       </Routes>
     
-    </AppLayout>
     
 
 
